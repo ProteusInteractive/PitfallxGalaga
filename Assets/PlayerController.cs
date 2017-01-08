@@ -24,8 +24,19 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         //every frame before rendering, calculate player movement and constrain within movement boundaries
-        PlayerMove();
         UpdatePlayerBounds();
+        PlayerMove();
+    }
+
+     void UpdatePlayerBounds()
+
+    {
+        //get the distance from camera to player
+        float camDistance = Camera.main.transform.position.z - player.transform.position.z;
+        //print screen position of player each frame based on camera position
+        Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3 (player.transform.position.x, player.transform.position.y, camDistance));
+        print(p);
+        Vector3 q = Camera.main.ScreenToWorldPoint(new Vector3());
     }
 
     void PlayerMove()
@@ -37,10 +48,5 @@ public class PlayerController : MonoBehaviour {
         newPos.x = Mathf.Clamp(newPos.x, minimumX, maximumX);
         newPos.z = Mathf.Clamp(newPos.z, minimumZ, maximumZ);
         player.transform.localPosition = newPos;
-    }
-
-    void UpdatePlayerBounds()
-    {
-        Camera.main.ViewportToWorldPoint
     }
 }
