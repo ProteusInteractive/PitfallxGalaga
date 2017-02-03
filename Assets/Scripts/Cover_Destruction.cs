@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class Cover_Destruction : MonoBehaviour {
 
     Rigidbody coverRb;
 
@@ -15,10 +15,10 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	    void OnCollisionEnter(Collision collision)
-        {
-                if()
-        }
+	    //void OnCollisionEnter(Collision collision)
+     //   {
+     //           if()
+     //   }
 
 	}
 }
