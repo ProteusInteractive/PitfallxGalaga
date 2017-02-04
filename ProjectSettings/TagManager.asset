@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Cover
   - New Tag
+  - Background
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - 
   - Cover
   - Enemy Projectiles
-  - 
-  - 
+  - Bounding Box
+  - Player
   - 
   - 
   - 
