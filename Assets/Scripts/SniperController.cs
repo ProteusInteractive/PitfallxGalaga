@@ -39,18 +39,16 @@ public class SniperController : MonoBehaviour {
 
     private void MoveInDirection()
     {
-        float prevPosition = transform.position.x;
-
         //move the formation left/right based on bool
         if (movingRight)
         {
-            sniperPos = new Vector3 (prevPosition+speed, 0, 0); 
+            sniperPos += Vector3.right * speed; 
         }
         else
         {
-            sniperPos = new Vector3(prevPosition-speed, 0, 0);
+            sniperPos += Vector3.left * speed;
         }
-        sniperPos = transform.position;
+        transform.position = sniperPos;
     }
 }
 
