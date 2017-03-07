@@ -7,7 +7,7 @@ public class Cover_Destruction : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         //if the other object is a bullet, destroy.  else no destroy on collision
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (!collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

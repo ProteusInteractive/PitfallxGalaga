@@ -21,7 +21,6 @@ public class SniperController : MonoBehaviour {
     {
         SniperDirection();
         MoveInDirection();
-        print(sniperPos);
     }
 
     private void SniperDirection()
