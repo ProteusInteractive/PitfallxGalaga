@@ -3,10 +3,11 @@ using System.Collections;
 
 public class SniperShooting : MonoBehaviour
 {
-    public GameObject playerTarget;
     public GameObject bullet;
     public GameObject bullets;
-    bool isOffCooldown = true;
+    float sinceLastShot = 0;
+    bool isOffCooldown = false;
+    public float cooldown;
 
 	// Use this for initialization
 	void Start ()
@@ -20,12 +21,34 @@ public class SniperShooting : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        ShotCooldown();
         ShootAtPlayer();
+        
+
+    }
+
+    void ShotCooldown()
+    {
+        ;
+
+        if (sinceLastShot < cooldown)
+        {
+            sinceLastShot += Time.deltaTime;
+        }
         isOffCooldown = true;
+
+
+
     }
 
     void ShootAtPlayer()
     {
-        Instantiate(bullet, transform.position, Quaternion.identity, bullets.transform);
+        if (isOffCooldown)
+        {
+            Instantiate(bullet, transform.position, Quaternion.identity, bullets.transform);
+            isOffCooldown = false;
+            sinceLastShot = 0;
+        }
+
     }
 }

@@ -106,9 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab8af7fb392c6444abae5d7d84fe9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTarget: {fileID: 0}
   bullet: {fileID: 1000014125350884, guid: a709bf0251f71f74ba87ad1bba19c672, type: 2}
   bullets: {fileID: 0}
+  cooldown: 2
 --- !u!136 &136000010411918544
 CapsuleCollider:
   m_ObjectHideFlags: 1
