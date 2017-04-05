@@ -108,7 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1000014125350884, guid: a709bf0251f71f74ba87ad1bba19c672, type: 2}
   bullets: {fileID: 0}
-  cooldown: 2
+  fireRatep: 0.5
+  fireRatem: 2
+  nextFire: 3
 --- !u!136 &136000010411918544
 CapsuleCollider:
   m_ObjectHideFlags: 1

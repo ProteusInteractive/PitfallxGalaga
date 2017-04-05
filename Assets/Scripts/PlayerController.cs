@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public GameObject player;
+    public float playerLives;
     Rigidbody rb;
  
     void Start()
